@@ -31,4 +31,9 @@ class Owner
     @@all.clear
   end
 
+  def cats
+    #@@all cats equal to owner
+    Cat.all.select{|owned_cats| owned_cats.owner == self}
+  end
+
 end
